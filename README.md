@@ -51,3 +51,5 @@ terraform/
 │     ├─ providers.tf
 │     └─ outputs.tf
 └─ README.md
+
+# Need to change the architecture for the digital ocean.
