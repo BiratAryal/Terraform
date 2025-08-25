@@ -11,9 +11,15 @@ variable "cluster_name"    { type = string }
 variable "cluster_version" { type = string }
 
 variable "app_bucket"      { type = string }
-variable "enable_access_logs" { type = bool, default = true }
+variable "enable_access_logs" {
+  type = bool
+  default = true 
+}
 
-variable "tags"            { type = map(string), default = {} }
+variable "tags"            {
+   type = map(string)
+   default = {} 
+}
 
 variable "ha_enabled" {
   description = "If true, use 3-AZ spread and HA node-group shape"

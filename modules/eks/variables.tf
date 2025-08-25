@@ -2,7 +2,10 @@ variable "cluster_name"       { type = string }
 variable "cluster_version"    { type = string }
 variable "vpc_id"             { type = string }
 variable "private_subnet_ids" { type = list(string) }
-variable "tags"               { type = map(string), default = {} }
+variable "tags" { 
+      type = map(string)
+       default = {} 
+}
 variable "node_groups" {
   description = "Map of EKS managed node groups to create"
   type = map(object({
