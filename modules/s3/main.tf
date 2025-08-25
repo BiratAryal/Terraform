@@ -27,7 +27,10 @@ resource "aws_s3_bucket_lifecycle_configuration" "lc" {
   rule {
     id     = "transition-ia"
     status = "Enabled"
-    transition { days = 30, storage_class = "STANDARD_IA" }
+    transition { 
+      days = 30
+      storage_class = "STANDARD_IA" 
+    }
     expiration { days = 365 }
   }
 }
